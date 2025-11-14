@@ -1,0 +1,61 @@
+<!-- Simple Chatbot -->
+<div id="chatbot">
+  <div id="chat-header" onclick="toggleChat()">Novus Crocs Chat ⬇</div>
+  <div id="chat-body">
+    <div id="messages">
+      <div class="bot-message">Hi! How can I help you today? 🤖</div>
+    </div>
+    <input type="text" id="user-input" placeholder="Type a message..." onkeypress="if(event.key==='Enter'){sendMessage();}">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<style>
+  #chatbot {position: fixed; bottom: 20px; right: 20px; width: 300px; font-family: sans-serif; z-index: 1000;}
+  #chat-header {background: #0078d7; color: white; padding: 10px; cursor: pointer; border-radius: 8px 8px 0 0;}
+  #chat-body {background: #f1f1f1; border: 1px solid #ddd; border-radius: 0 0 8px 8px; display: none; flex-direction: column; padding: 10px; max-height: 350px;}
+  #messages {overflow-y: auto; max-height: 250px; margin-bottom: 10px;}
+  .message {padding: 8px; margin: 5px 0; border-radius: 5px; max-width: 80%;}
+  .bot-message {background: #0078d7; color: white; align-self: flex-start;}
+  .user-message {background: #e4e6eb; color: black; align-self: flex-end;}
+  #user-input {width: calc(100% - 60px); padding: 6px; margin-right: 5px; border-radius: 4px; border: 1px solid #ddd;}
+  button {padding: 6px 10px; border:none; background: #0078d7; color: white; border-radius: 4px; cursor: pointer;}
+</style>
+
+<script>
+function toggleChat(){
+  const body = document.getElementById('chat-body');
+  body.style.display = body.style.display==='none'||body.style.display==='' ? 'flex':'none';
+}
+
+function sendMessage(){
+  const input = document.getElementById('user-input');
+  const text = input.value.trim();
+  if(!text) return;
+  
+  addMessage(text, 'user');
+  input.value='';
+  
+  setTimeout(()=>{ 
+    addMessage(getResponse(text), 'bot');
+  },500);
+}
+
+function addMessage(text, sender){
+  const messages = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className='message '+sender+'-message';
+  div.innerText=text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function getResponse(msg){
+  msg = msg.toLowerCase();
+  if(msg.includes('hi')||msg.includes('hello')) return 'Hello! How can I assist you today? 😊';
+  if(msg.includes('products')||msg.includes('cameras')) return 'We offer high-quality CCTV cameras like HiLook and Hikvision. Would you like more details?';
+  if(msg.includes('pricing')) return 'Our pricing starts from $100. Contact us for detailed quotes.';
+  if(msg.includes('contact')) return 'Email: novuscrocs@gmail.com | Phone: (079) 094-5360';
+  return "I'm sorry, I didn't understand that. Can you ask something else?";
+}
+</script>
