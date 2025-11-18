@@ -526,10 +526,91 @@ function addMessage(sender, text) {
 }
 </script>
 
+	<!-- ---------- PAYMENT POPUP ---------- -->
+<div id="paymentPopup">
+    <div id="paymentBox">
+        <h3 id="selectedProduct">Buying:</h3>
+
+        <label><strong>Your Name</strong></label>
+        <input type="text" id="buyerName" placeholder="Enter your name">
+
+        <label><strong>Your Phone Number</strong></label>
+        <input type="text" id="buyerPhone" placeholder="Enter your phone">
+
+        <label><strong>Email (optional)</strong></label>
+        <input type="text" id="buyerEmail" placeholder="Enter your email">
+
+        <label><strong>Payment Method</strong></label>
+        <select id="paymentMethod">
+            <option value="">-- Choose a payment method --</option>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+            <option value="EFT Bank Transfer">EFT Bank Transfer</option>
+            <option value="Pay at Collection">Pay at Collection</option>
+        </select>
+
+        <button id="confirmOrder">Confirm Order</button>
+        <button id="closePopup" class="cancelBtn">Cancel</button>
+    </div>
+</div>
+
+<style>
+/* Popup background */
+#paymentPopup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+/* Popup box */
+#paymentBox {
+    background: white;
+    padding: 20px;
+    width: 330px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#paymentBox input, #paymentBox select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#confirmOrder {
+    width: 100%;
+    padding: 12px;
+    background: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cancelBtn {
+    width: 100%;
+    padding: 12px;
+    background: #aaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+
 
 
 </body>
 </html>
+
 
 
 
