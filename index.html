@@ -524,6 +524,70 @@ function addMessage(sender, text) {
     box.appendChild(div);
     box.scrollTop = box.scrollHeight;
 }
+
+		<script>
+/* ---------- BUY BUTTON POPUP ---------- */
+const buyButtons = document.querySelectorAll(".buyBtn");
+const popup = document.getElementById("paymentPopup");
+const selectedProductText = document.getElementById("selectedProduct");
+
+buyButtons.forEach(btn => {
+    btn.addEventListener("click", function () {
+        const productName = this.getAttribute("data-product");
+        selectedProductText.textContent = "Buying: " + productName;
+        popup.style.display = "flex";
+        popup.setAttribute("data-product", productName);
+    });
+});
+
+/* ---------- CLOSE POPUP ---------- */
+document.getElementById("closePopup").onclick = () => {
+    popup.style.display = "none";
+};
+
+/* ---------- CONFIRM ORDER ---------- */
+document.getElementById("confirmOrder").onclick = () => {
+    const product = popup.getAttribute("data-product");
+    const name = document.getElementById("buyerName").value.trim();
+    const phone = document.getElementById("buyerPhone").value.trim();
+    const email = document.getElementById("buyerEmail").value.trim();
+    const payment = document.getElementById("paymentMethod").value;
+
+    if (!name || !phone || !payment) {
+        alert("Please fill in your name, phone number, and payment method.");
+        return;
+    }
+
+    // WhatsApp message content
+    const message =
+`New Order from Novus Crocs Website:
+
+Product: ${product}
+Name: ${name}
+Phone: ${phone}
+Email: ${email || "Not Provided"}
+Payment Method: ${payment}
+`;
+
+    // Your WhatsApp number (international format)
+    const phoneNumber = "27790945360";  // CHANGE IF NEEDED
+
+    // Encode and open WhatsApp message
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+
+    // Close popup
+    popup.style.display = "none";
+
+    // Clear fields
+    document.getElementById("buyerName").value = "";
+    document.getElementById("buyerPhone").value = "";
+    document.getElementById("buyerEmail").value = "";
+    document.getElementById("paymentMethod").value = "";
+};
+</script>
+
 </script>
 
 	<!-- ---------- PAYMENT POPUP ---------- -->
