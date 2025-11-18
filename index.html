@@ -362,7 +362,7 @@ padding:15px 20px; border-radius:50px; font-weight:bold;">
             <option value="">-- Choose --</option>
             <option value="Cash on Delivery">Cash on Delivery</option>
             <option value="EFT Bank Transfer">EFT Bank Transfer</option>
-            <option value="Pay at Collection">Pay at Collection</option>
+            
         </select>
         <button id="confirmOrder">Confirm Order</button>
         <button id="closePopup" class="cancelBtn">Cancel</button>
@@ -419,8 +419,9 @@ Email: ${email || "Not provided"}
 Payment Method: ${payment}
 `;
 
-        const whatsappURL = 
-            "https://wa.me/27790945360?text=" + encodeURIComponent(message);
+ 
+            const whatsappURL = "https://wa.me/27673212377?text=" + encodeURIComponent(message);
+
 
         window.open(whatsappURL, "_blank");
         popup.style.display = "none";
@@ -509,4 +510,5 @@ Payment Method: ${payment}
 
 </body>
 </html>
+
 
