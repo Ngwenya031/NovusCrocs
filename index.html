@@ -6,396 +6,360 @@
 <title>Novus Crocs | Security & Sensor Solutions</title>
 <style>
 /* ---------- GLOBAL STYLES ---------- */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #333;
-    line-height: 1.6;
-}
-a { text-decoration: none; color: #0078d7; }
-a:hover { text-decoration: underline; }
-img { max-width: 100%; height: auto; border-radius: 5px; }
-
+body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#f5f7fa; color:#333; line-height:1.6;}
+a {text-decoration:none;color:#0078d7;} a:hover{text-decoration:underline;}
+img {max-width:100%; height:auto; border-radius:5px;}
 /* ---------- HEADER ---------- */
-header {
-    background: #001f3f;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
-header p { font-size: 1.1rem; margin-top: 10px; }
-
+header {background:#001f3f; color:white; text-align:center; padding:40px 20px;}
+header h1 {margin:0; font-size:2.5rem; letter-spacing:1px;}
+header p {font-size:1.1rem; margin-top:10px;}
 /* ---------- NAVIGATION ---------- */
-nav {
-    background: #0078d7;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-nav a { color: white; margin: 0 15px; font-weight: bold; }
-nav a:hover { color: #ffda44; }
-
+nav {background:#0078d7; display:flex; justify-content:center; padding:10px 0;}
+nav a {color:white; margin:0 15px; font-weight:bold;}
+nav a:hover {color:#ffda44;}
 /* ---------- SECTIONS ---------- */
-section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-section h2, section h3 {
-    color: #001f3f;
-    margin-bottom: 20px;
-    border-left: 5px solid #0078d7;
-    padding-left: 10px;
-}
-
+section {padding:40px 20px; max-width:1000px; margin:auto;}
+section h2, section h3 {color:#001f3f; margin-bottom:20px; border-left:5px solid #0078d7; padding-left:10px;}
 /* ---------- FLEX GRID ---------- */
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.grid div {
-    flex: 1 1 300px;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
+.grid {display:flex; flex-wrap:wrap; gap:20px;}
+.grid div {flex:1 1 300px; background:white; padding:15px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+button.buyBtn {background:#0078d7; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;}
 /* ---------- FOOTER ---------- */
-footer {
-    background: #001f3f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-footer p { margin: 5px; font-size: 0.9rem; }
-
+footer {background:#001f3f; color:white; text-align:center; padding:20px; margin-top:40px;}
+footer p {margin:5px; font-size:0.9rem;}
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-    nav { flex-direction: column; }
-    nav a { padding: 8px 0; }
-}
-
+@media (max-width:768px){nav{flex-direction:column;} nav a{padding:8px 0;}}
 /* ---------- CHATBOT ---------- */
-#aiChatBtn {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    background: #0078d7;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 9999;
-}
-#aiChatWindow {
-    position: fixed;
-    bottom: 150px;
-    right: 20px;
-    width: 320px;
-    max-height: 450px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    display: none;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 9999;
-}
-#aiChatHeader {
-    background: #001f3f;
-    color: white;
-    padding: 12px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#aiCloseBtn { cursor: pointer; font-size: 20px; }
-#aiChatMessages {
-    padding: 10px;
-    height: 300px;
-    overflow-y: auto;
-    background: #f5f7fa;
-}
-#aiChatInputBox {
-    display: flex;
-    padding: 10px;
-    background: #eee;
-}
-#aiChatInput {
-    flex-grow: 1;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-#aiSendBtn {
-    background: #0078d7;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin-left: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
+#aiChatBtn {position:fixed; bottom:90px; right:20px; background:#0078d7; color:white; padding:15px 20px; border-radius:50px; border:none; cursor:pointer; font-size:1rem; box-shadow:0 4px 10px rgba(0,0,0,0.2); z-index:9999;}
+#aiChatWindow {position:fixed; bottom:150px; right:20px; width:320px; max-height:450px; background:white; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.3); display:none; flex-direction:column; overflow:hidden; z-index:9999;}
+#aiChatHeader {background:#001f3f; color:white; padding:12px; font-weight:bold; display:flex; justify-content:space-between; align-items:center;}
+#aiCloseBtn {cursor:pointer; font-size:20px;}
+#aiChatMessages {padding:10px; height:300px; overflow-y:auto; background:#f5f7fa;}
+#aiChatInputBox {display:flex; padding:10px; background:#eee;}
+#aiChatInput {flex-grow:1; padding:10px; border-radius:5px; border:none;}
+#aiSendBtn {background:#0078d7; color:white; border:none; padding:10px 15px; margin-left:5px; border-radius:5px; cursor:pointer;}
 /* ---------- PAYMENT POPUP ---------- */
-#paymentPopup {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
-#paymentBox {
-    background: white;
-    padding: 20px;
-    width: 330px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-#paymentBox input, #paymentBox select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-#confirmOrder {
-    width: 100%;
-    padding: 12px;
-    background: #0078d7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.cancelBtn {
-    width: 100%;
-    padding: 12px;
-    background: #aaa;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+#paymentPopup {position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); display:none; justify-content:center; align-items:center; z-index:99999;}
+#paymentBox {background:white; padding:20px; width:330px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+#paymentBox input, #paymentBox select {width:100%; padding:10px; margin-bottom:12px; border-radius:5px; border:1px solid #ccc;}
+#confirmOrder {width:100%; padding:12px; background:#0078d7; color:white; border:none; border-radius:5px; cursor:pointer; font-weight:bold; margin-bottom:10px;}
+.cancelBtn {width:100%; padding:12px; background:#aaa; color:white; border:none; border-radius:5px; cursor:pointer;}
 </style>
 </head>
-
 <body>
-
 <!-- LOGO -->
 <div class="image-container">
-    <img src="images/Logo.jpg" style="width:100%; height:auto; object-fit:cover;">
+<img src="images/Logo.jpg" style="width:100%; height:auto; object-fit:cover;">
 </div>
 
 <header>
-    <h1>Novus Crocs</h1>
-    <p>Innovative Security and Sensor Solutions for a Safer Future</p>
+<h1>Novus Crocs</h1>
+<p>Innovative Security and Sensor Solutions for a Safer Future</p>
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
 </nav>
 
+<!-- HOME -->
 <section id="home">
-    <h2>Welcome to Novus Crocs</h2>
-    <p>
-        At <strong>Novus Crocs</strong>, we specialize in cutting-edge security systems, sensors, and surveillance
-        technologies designed to protect homes, businesses, and communities.
-    </p>
+<h2>Welcome to Novus Crocs</h2>
+<p>At <strong>Novus Crocs</strong>, we specialize in cutting-edge security systems, sensors, and surveillance technologies designed to protect homes, businesses, and communities.</p>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-    <h2>About Us</h2>
-    <p>Founded in 2025, Novus Crocs delivers intelligent monitoring and sensing systems trusted across industries.</p>
+<h2>About Us</h2>
+<p>Founded in 2025, Novus Crocs delivers intelligent monitoring and sensing systems trusted across industries.</p>
 </section>
 
+<!-- PRODUCTS -->
 <section id="products">
-    <h2>Our Products</h2>
-    <h3>Bullet Cameras</h3>
-    <div class="grid">
-        <!-- Example product; you can copy/paste for all products -->
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera1.jpeg">
-            <h3>Hilook 1080P 4 Channel DVR & 4 Bullet Cameras DIY CCTV KIT</h3>
-            <p>Reliable, easy to use, and cost-effective surveillance.</p>
-            <button class="buyBtn" data-product="Hilook 1080P 4 Channel DIY Kit">Buy</button>
-        </div>
-        <!-- Add more products as needed -->
-    </div>
+<h2>Our Products</h2>
+
+<h3>Bullet Cameras</h3>
+<div class="grid">
+<!-- PRODUCT 1 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera1.jpeg">
+<h3>Hilook 1080P 4 Channel DVR & 4 Bullet Cameras DIY CCTV KIT</h3>
+<p>Reliable, easy to use, and cost-effective surveillance.</p>
+<button class="buyBtn" data-product="Hilook 1080P 4 Channel DIY Kit">Buy</button>
+</div>
+<!-- PRODUCT 2 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera2.jpeg">
+<h3>Hilook 1080P 8 Channel DVR & 8 Bullet Cameras CCTV KIT</h3>
+<p>High-definition coverage with 8 outdoor cameras.</p>
+<button class="buyBtn" data-product="Hilook 1080P 8 Channel DIY Kit">Buy</button>
+</div>
+<!-- PRODUCT 3 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera3.jpeg">
+<h3>Hikvision 1080P DVR & 4 Bullet Cameras DIY CCTV Kit</h3>
+<p>High-performance home and business security solution.</p>
+<button class="buyBtn" data-product="Hikvision 1080P 4 Channel DIY Kit">Buy</button>
+</div>
+<!-- PRODUCT 4 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera4.jpeg">
+<h3>Hikvision 1080P 8 Channel DVR & 8 Bullet Cameras DIY CCTV KIT</h3>
+<p>Perfect for large property monitoring with ultra-clear imaging.</p>
+<button class="buyBtn" data-product="Hikvision 1080P 8 Channel DIY Kit">Buy</button>
+</div>
+<!-- PRODUCT 5 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera5.jpeg">
+<h3>Hikvision ColorVu 1080P 4 Channel DIY CCTV KIT</h3>
+<p>Full-colour 24/7 surveillance — even in total darkness.</p>
+<button class="buyBtn" data-product="Hikvision 1080P 4 Channel ColorVu Kit">Buy</button>
+</div>
+<!-- PRODUCT 6 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera6.png">
+<h3>Hikvision 8ch CCTV Kit</h3>
+<p>A complete high-quality surveillance bundle for homes, offices, and businesses. Designed for fast installation, reliability, and full HD recording.</p>
+<button class="buyBtn" data-product="Hikvision 8ch CCTV Kit">Buy</button>
+</div>
+<!-- PRODUCT 7 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera7.png">
+<h3>Remote View | High Spec | Full HD | H.265 | 1080P (8 Channel)</h3>
+<p>A powerful 8-channel DIY CCTV Kit with high-quality 1080P cameras, H.265 compression, remote view via Hik-Connect App, and IP67 weather protection. Includes: DS-7108HQHI-K1 DVR, 8 x 2MP Bullet Cameras, cables, and power supplies.</p>
+<button class="buyBtn" data-product="High Spec 8 Channel Full HD CCTV Kit">Buy</button>
+</div>
+<!-- PRODUCT 8 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera8.png">
+<h3>High Spec 4 Channel DIY CCTV Kit</h3>
+<p>Ideal for home and business use, offering high-quality 1080P surveillance. Includes DS-7104HQHI-K1 DVR and 4 full HD cameras for clear day/night monitoring.</p>
+<button class="buyBtn" data-product="High Spec 4 Channel DIY CCTV Kit">Buy</button>
+</div>
+<!-- PRODUCT 9 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera9.png">
+<h3>Dahua 8 Channel 1080P CCTV Kit</h3>
+<p>Perfect for homes & small businesses. Includes: Dahua 8ch DVR, 8 x 1080P Bullet Cameras, 20m cables, junction boxes, power supplies, and splitters.</p>
+<button class="buyBtn" data-product="Dahua 8 Channel 1080P CCTV Kit">Buy</button>
+</div>
+<!-- PRODUCT 10 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera10.png">
+<h3>8 Channel H.264 AHD DVR Kit (1080p Cameras)</h3>
+<p>Includes: 8ch H.264 DVR, 1080p digital cameras, 15m BNC cables, power supply, power splitters, USB mouse, and manual. Supports mobile remote viewing, waterproof cameras, and motion detection.</p>
+<button class="buyBtn" data-product="8 Channel H.264 AHD 1080P Kit">Buy</button>
+</div>
+<!-- PRODUCT 11 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera11.png">
+<h3>4 Channel H.264 HD DVR Kit (720P Cameras)</h3>
+<p>Includes 4 x 720P cameras, 18m cables, motion detection, remote viewing, waterproof design, and full hexaplex operation. 4ch 720P @ 25fps recording & playback.</p>
+<button class="buyBtn" data-product="4 Channel H.264 HD 720P Kit">Buy</button>
+</div>
+</div>
+
+<h3>Sensors & Detectors</h3>
+<div class="grid">
+<!-- SENSOR 1 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors1.png">
+<h3>Ajax Wireless Alarm Starter Kit - 3</h3>
+<p>Wireless alarm system installable within 30 minutes. Full control via the Ajax Smart Security App with panic alerts, notifications, and adjustable sensor settings. SmartSocket integration enables automation features.</p>
+<button class="buyBtn" data-product="Ajax Wireless Alarm Starter Kit 3">Buy</button>
+</div>
+<!-- SENSOR 2 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors2.png">
+<h3>Solar Motion Sensor Alarm (129dB)</h3>
+<p>5–8m wide motion detection, 110° sensing angle, 129dB siren, and 6-LED flashlight. Features 4 operating modes, solar-powered operation (30 days per charge), and IP65 waterproof design.</p>
+<button class="buyBtn" data-product="Solar Motion Sensor Alarm 129dB">Buy</button>
+</div>
+<!-- SENSOR 3 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors3.png">
+<h3>Hikvision DS-PDPC12PF-EG2-WE Wireless PIR-Camera Detector</h3>
+<p>Two-way wireless PIR detector with integrated camera for instant motion-triggered video verification. Ideal for smart, real-time monitoring in homes and businesses.</p>
+<button class="buyBtn" data-product="Hikvision Wireless PIR Camera Detector">Buy</button>
+</div>
+<!-- SENSOR 4 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors4.png">
+<h3>Onyyx Wireless Security Hub Kit (Up to 20 Devices)</h3>
+<p>Wireless bi-directional security system supporting up to 20 devices. Full control via Onyyx App or keyring remote. 200m wireless range, LTE/Dual SIM/2G/Wi-Fi support, real-time notifications, and simple QR-code setup. 12-hour HUB battery life and 24-month sensor battery life.</p>
+<button class="buyBtn" data-product="Onyyx Wireless Security Hub Kit">Buy</button>
+</div>
+<!-- SENSOR 5 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors5.png">
+<h3>Onyyx Complete Wireless Security Kit (Panel + PIRs + Siren)</h3>
+<p>Full wireless protection system including: 1x Panel, 4x PIR sensors, 1x Remote, 1x Door Sensor, and 1x Outdoor Siren. Supports up to 20 devices, app control, 200m wireless range, LTE/Dual SIM/Wi-Fi 2.4GHz connectivity, and event notifications.</p>
+<button class="buyBtn" data-product="Onyyx Complete Wireless Security Kit">Buy</button>
+</div>
+<!-- SENSOR 6 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors6.png">
+<h3>Solar Motion Sensor Alarm – Model 2 (129dB)</h3>
+<p>Wide 5–8m detection range, 110° angle, 129dB siren, and bright 6-LED flashlight. Features 4 operation modes and long-lasting solar-powered battery providing up to 30 days of use. IP65 waterproof for any environment.</p>
+<button class="buyBtn" data-product="Solar Motion Sensor Alarm Model 2">Buy</button>
+</div>
+<!-- SENSOR 7 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors7.png">
+<h3>Hikvision AX PRO Wireless Security Kit</h3>
+<p>Complete professional wireless alarm system including AX PRO Hub, wireless PIR detectors, keyfobs, and internal siren. Supports TCP/IP, Wi-Fi & GPRS, Tri-X/Cam-X protocol, AES-128 encryption, and long-range RF communication.</p>
+<button class="buyBtn" data-product="Hikvision AX PRO Wireless Security Kit">Buy</button>
+</div>
+<!-- SENSOR 8 -->
+<div>
+<img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors8.png">
+<h3>7-Inch Touchscreen Video Intercom & Door Station Kit</h3>
+<p>Smart and user-friendly video intercom system featuring a 7-inch full-color touchscreen monitor and advanced door station with HD video and access control.</p>
+<button class="buyBtn" data-product="7-Inch Touch Video Intercom Kit">Buy</button>
+</div>
+</div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> novuscrocs@gmail.com</p>
-    <p><strong>Phone:</strong> (067) 321 2377</p>
-    <p><strong>Address:</strong> 315T, KwaDabeka, South Africa</p>
+<h2>Contact Us</h2>
+<p><strong>Email:</strong> novuscrocs@gmail.com</p>
+<p><strong>Phone:</strong> (067) 321 2377</p>
+<p><strong>Address:</strong> 315T, KwaDabeka, South Africa</p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Novus Crocs. All rights reserved.</p>
+<p>&copy; 2025 Novus Crocs. All rights reserved.</p>
 </footer>
 
-<a href="https://wa.me/27790945360" target="_blank"
-style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white;
-padding:15px 20px; border-radius:50px; font-weight:bold;">
-💬 Chat on WhatsApp
-</a>
+<a href="https://wa.me/27790945360" target="_blank" style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 20px; border-radius:50px; font-weight:bold;"> 💬 Chat on WhatsApp </a>
 
-<!-- ---------- CHATBOT WINDOW ---------- -->
+<!-- ---------- CHATBOT ---------- -->
 <button id="aiChatBtn">🤖 AI Assistant</button>
 <div id="aiChatWindow">
-    <div id="aiChatHeader">
-        Novus Crocs AI Assistant
-        <span id="aiCloseBtn">&times;</span>
-    </div>
-    <div id="aiChatMessages"></div>
-    <div id="aiChatInputBox">
-        <input id="aiChatInput" type="text" placeholder="Ask me anything...">
-        <button id="aiSendBtn">Send</button>
-    </div>
+<div id="aiChatHeader"> Novus Crocs AI <span id="aiCloseBtn">&times;</span></div>
+<div id="aiChatMessages"></div>
+<div id="aiChatInputBox">
+<input id="aiChatInput" type="text" placeholder="Ask me anything...">
+<button id="aiSendBtn">Send</button>
+</div>
 </div>
 
 <!-- ---------- PAYMENT POPUP ---------- -->
 <div id="paymentPopup">
-    <div id="paymentBox">
-        <h3 id="selectedProduct">Buying:</h3>
-        <label><strong>Your Name</strong></label>
-        <input id="buyerName" type="text">
-        <label><strong>Your Phone Number</strong></label>
-        <input id="buyerPhone" type="text">
-        <label><strong>Email (optional)</strong></label>
-        <input id="buyerEmail" type="text">
-        <label><strong>Payment Method</strong></label>
-        <select id="paymentMethod">
-            <option value="">-- Choose --</option>
-            <option value="Cash on Delivery">Cash on Delivery</option>
-            <option value="EFT Bank Transfer for Installments">EFT Bank Transfer</option>
-        </select>
-        <button id="confirmOrder">Confirm Order</button>
-        <button id="closePopup" class="cancelBtn">Cancel</button>
-    </div>
+<div id="paymentBox">
+<h3 id="selectedProduct">Buying:</h3>
+<label><strong>Your Name</strong></label>
+<input id="buyerName" type="text">
+<label><strong>Your Phone Number</strong></label>
+<input id="buyerPhone" type="text">
+<label><strong>Email (optional)</strong></label>
+<input id="buyerEmail" type="text">
+<label><strong>Payment Method</strong></label>
+<select id="paymentMethod">
+<option value="">-- Choose --</option>
+<option value="Cash on Delivery">Cash on Delivery</option>
+<option value="EFT Bank Transfer for Installments">EFT Bank Transfer</option>
+</select>
+<button id="confirmOrder">Confirm Order</button>
+<button id="closePopup" class="cancelBtn">Cancel</button>
+</div>
 </div>
 
 <!-- ---------- JAVASCRIPT ---------- -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+<script type="module">
+import { Wllama } from 'https://unpkg.com/@wllama/wllama@latest/dist/esm/wllama.js';
 
-    /* --- BUY BUTTON POPUP --- */
-    const buyButtons = document.querySelectorAll(".buyBtn");
-    const popup = document.getElementById("paymentPopup");
-    const selectedProductText = document.getElementById("selectedProduct");
-    const buyerName = document.getElementById("buyerName");
-    const buyerPhone = document.getElementById("buyerPhone");
-    const buyerEmail = document.getElementById("buyerEmail");
-    const paymentMethod = document.getElementById("paymentMethod");
-    const closePopup = document.getElementById("closePopup");
-    const confirmOrder = document.getElementById("confirmOrder");
+document.addEventListener("DOMContentLoaded", async () => {
+  // ---------------- BUY BUTTONS ----------------
+  const buyButtons = document.querySelectorAll(".buyBtn");
+  const popup = document.getElementById("paymentPopup");
+  const selectedProductText = document.getElementById("selectedProduct");
+  const buyerName = document.getElementById("buyerName");
+  const buyerPhone = document.getElementById("buyerPhone");
+  const buyerEmail = document.getElementById("buyerEmail");
+  const paymentMethod = document.getElementById("paymentMethod");
+  const closePopup = document.getElementById("closePopup");
+  const confirmOrder = document.getElementById("confirmOrder");
 
-    buyButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const name = btn.getAttribute("data-product");
-            selectedProductText.textContent = "Buying: " + name;
-            popup.style.display = "flex";
-            popup.dataset.product = name;
-        });
+  buyButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const name = btn.getAttribute("data-product");
+      selectedProductText.textContent = "Buying: " + name;
+      popup.style.display = "flex";
+      popup.dataset.product = name;
     });
+  });
 
-    closePopup.addEventListener("click", () => { popup.style.display = "none"; });
+  closePopup.addEventListener("click", () => { popup.style.display = "none"; });
 
-    confirmOrder.addEventListener("click", () => {
-        const product = popup.dataset.product;
-        const name = buyerName.value.trim();
-        const phone = buyerPhone.value.trim();
-        const email = buyerEmail.value.trim();
-        const payment = paymentMethod.value;
+  confirmOrder.addEventListener("click", () => {
+    const product = popup.dataset.product;
+    const name = buyerName.value.trim();
+    const phone = buyerPhone.value.trim();
+    const email = buyerEmail.value.trim();
+    const payment = paymentMethod.value;
+    if(!name || !phone || !payment){ alert("Please fill in your name, phone and payment method."); return; }
+    const message = `New Order from Novus Crocs Website:\nProduct: ${product}\nName: ${name}\nPhone: ${phone}\nEmail: ${email||"Not provided"}\nPayment Method: ${payment}`;
+    const whatsappURL = "https://wa.me/27673212377?text=" + encodeURIComponent(message);
+    window.open(whatsappURL, "_blank");
+    popup.style.display="none";
+    buyerName.value=""; buyerPhone.value=""; buyerEmail.value=""; paymentMethod.selectedIndex=0;
+  });
 
-        if (!name || !phone || !payment) {
-            alert("Please fill in your name, phone and payment method.");
-            return;
-        }
+  // ---------------- LOCAL LLaMA CHATBOT ----------------
+  const aiChatBtn = document.getElementById("aiChatBtn");
+  const aiChatWindow = document.getElementById("aiChatWindow");
+  const aiCloseBtn = document.getElementById("aiCloseBtn");
+  const aiSendBtn = document.getElementById("aiSendBtn");
+  const aiChatInput = document.getElementById("aiChatInput");
+  const aiChatMessages = document.getElementById("aiChatMessages");
 
-        const message = `New Order from Novus Crocs Website:\n\nProduct: ${product}\nName: ${name}\nPhone: ${phone}\nEmail: ${email || "Not provided"}\nPayment Method: ${payment}`;
-        const whatsappURL = "https://wa.me/27673212377?text=" + encodeURIComponent(message);
-        window.open(whatsappURL, "_blank");
-        popup.style.display = "none";
+  aiChatBtn.addEventListener("click", () => { aiChatWindow.style.display="flex"; addMsg("Hello! I'm your local AI assistant. How can I help you today?", "bot"); });
+  aiCloseBtn.addEventListener("click", () => { aiChatWindow.style.display="none"; });
+  aiSendBtn.addEventListener("click", sendMsg);
+  aiChatInput.addEventListener("keypress", e => { if(e.key==="Enter") sendMsg(); });
 
-        buyerName.value = ""; buyerPhone.value = ""; buyerEmail.value = ""; paymentMethod.selectedIndex = 0;
-    });
+  function addMsg(text, sender="user"){
+    const div=document.createElement("div");
+    div.textContent=text;
+    div.style.padding="6px 10px";
+    div.style.margin="6px 0";
+    div.style.borderRadius="6px";
+    div.style.maxWidth="80%";
+    div.style.wordWrap="break-word";
+    if(sender==="user"){ div.style.background="#0078d7"; div.style.color="white"; div.style.alignSelf="flex-end"; } 
+    else { div.style.background="#e2e8f0"; div.style.color="black"; div.style.alignSelf="flex-start"; }
+    aiChatMessages.appendChild(div);
+    aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+  }
 
-    /* --- CHATBOT --- */
-    const aiChatBtn = document.getElementById("aiChatBtn");
-    const aiChatWindow = document.getElementById("aiChatWindow");
-    const aiCloseBtn = document.getElementById("aiCloseBtn");
-    const aiSendBtn = document.getElementById("aiSendBtn");
-    const aiChatInput = document.getElementById("aiChatInput");
-    const aiChatMessages = document.getElementById("aiChatMessages");
+  // ----- Load LLaMA Model -----
+  const CONFIG = { 'single-thread':'./wllama/single-thread/wllama.wasm' };
+  const wllama = new Wllama(CONFIG);
+  const modelUrl = [
+    'https://your-server.com/models/llama-model-00001.gguf',
+    'https://your-server.com/models/llama-model-00002.gguf'
+  ];
+  await wllama.loadModelFromUrl(modelUrl, { n_threads: 1, n_ctx: 512 });
 
-    aiChatBtn.addEventListener("click", () => {
-        aiChatWindow.style.display = "flex";
-        if (aiChatMessages.children.length === 0) {
-            addMsg("ai", "Hello! I'm the Novus Crocs AI assistant. How can I help you today?");
-        }
-    });
+  async function sendMsg(){
+    const userMsg = aiChatInput.value.trim();
+    if(!userMsg) return;
+    addMsg(userMsg, "user");
+    aiChatInput.value="";
+    addMsg("⏳ Thinking...", "bot");
 
-    aiCloseBtn.addEventListener("click", () => { aiChatWindow.style.display = "none"; });
-    aiSendBtn.addEventListener("click", sendMsg);
-    aiChatInput.addEventListener("keypress", e => { if(e.key==="Enter") sendMsg(); });
-
-    function addMsg(role, text) {
-        const div = document.createElement("div");
-        div.innerText = text;
-        div.style.margin = "8px 0"; div.style.padding = "10px"; div.style.borderRadius = "8px"; div.style.whiteSpace = "pre-wrap";
-        if(role==="user"){ div.style.background="#0078d7"; div.style.color="white"; div.style.textAlign="right"; }
-        else{ div.style.background="#e2e8f0"; }
-        aiChatMessages.appendChild(div);
-        aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-    }
-
-    /* --- Ollama Local API sendMsg --- */
-    async function sendMsg() {
-        const input = aiChatInput.value.trim();
-        if (!input) return;
-        addMsg("user", input);
-        aiChatInput.value = "";
-        addMsg("ai", "⏳ Thinking...");
-
-        try {
-            const response = await fetch("http://localhost:11434/v1/completions", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ model: "llama3", prompt: input, max_tokens: 200 })
-            });
-            const data = await response.json();
-            aiChatMessages.lastChild.remove();
-            const reply = data.completion || "No response from the bot.";
-            addMsg("ai", reply);
-        } catch (e) {
-            aiChatMessages.lastChild.remove();
-            addMsg("ai", "⚠ Error: Unable to connect to Ollama API.");
-            console.error(e);
-        }
-    }
-
+    const response = await wllama.complete({ prompt: userMsg, max_tokens: 128, temperature:0.7 });
+    aiChatMessages.lastChild.remove(); // Remove "Thinking..."
+    addMsg(response.text, "bot");
+  }
 });
 </script>
-
 </body>
 </html>
-
-
 
 
 
