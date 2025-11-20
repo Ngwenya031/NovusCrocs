@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novus Crocs | Security & Sensor Solutions</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novus Crocs | Security & Sensor Solutions</title>
 <style>
 /* ---------- GLOBAL STYLES ---------- */
 body {
@@ -14,21 +13,9 @@ body {
     color: #333;
     line-height: 1.6;
 }
-
-a {
-    text-decoration: none;
-    color: #0078d7;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
+a { text-decoration: none; color: #0078d7; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; border-radius: 5px; }
 
 /* ---------- HEADER ---------- */
 header {
@@ -37,17 +24,8 @@ header {
     text-align: center;
     padding: 40px 20px;
 }
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-}
-
-header p {
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
+header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+header p { font-size: 1.1rem; margin-top: 10px; }
 
 /* ---------- NAVIGATION ---------- */
 nav {
@@ -56,25 +34,12 @@ nav {
     justify-content: center;
     padding: 10px 0;
 }
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ffda44;
-}
+nav a { color: white; margin: 0 15px; font-weight: bold; }
+nav a:hover { color: #ffda44; }
 
 /* ---------- SECTIONS ---------- */
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-section h2 {
+section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+section h2, section h3 {
     color: #001f3f;
     margin-bottom: 20px;
     border-left: 5px solid #0078d7;
@@ -87,7 +52,6 @@ section h2 {
     flex-wrap: wrap;
     gap: 20px;
 }
-
 .grid div {
     flex: 1 1 300px;
     background: white;
@@ -104,20 +68,12 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
-
-footer p {
-    margin: 5px;
-    font-size: 0.9rem;
-}
+footer p { margin: 5px; font-size: 0.9rem; }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    nav a {
-        padding: 8px 0;
-    }
+    nav { flex-direction: column; }
+    nav a { padding: 8px 0; }
 }
 
 /* ---------- CHATBOT ---------- */
@@ -135,7 +91,6 @@ footer p {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 9999;
 }
-
 #aiChatWindow {
     position: fixed;
     bottom: 150px;
@@ -150,7 +105,6 @@ footer p {
     overflow: hidden;
     z-index: 9999;
 }
-
 #aiChatHeader {
     background: #001f3f;
     color: white;
@@ -160,32 +114,24 @@ footer p {
     justify-content: space-between;
     align-items: center;
 }
-
-#aiCloseBtn {
-    cursor: pointer;
-    font-size: 20px;
-}
-
+#aiCloseBtn { cursor: pointer; font-size: 20px; }
 #aiChatMessages {
     padding: 10px;
     height: 300px;
     overflow-y: auto;
     background: #f5f7fa;
 }
-
 #aiChatInputBox {
     display: flex;
     padding: 10px;
     background: #eee;
 }
-
 #aiChatInput {
     flex-grow: 1;
     padding: 10px;
     border-radius: 5px;
     border: none;
 }
-
 #aiSendBtn {
     background: #0078d7;
     color: white;
@@ -207,7 +153,6 @@ footer p {
     align-items: center;
     z-index: 99999;
 }
-
 #paymentBox {
     background: white;
     padding: 20px;
@@ -215,7 +160,6 @@ footer p {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-
 #paymentBox input, #paymentBox select {
     width: 100%;
     padding: 10px;
@@ -223,7 +167,6 @@ footer p {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-
 #confirmOrder {
     width: 100%;
     padding: 12px;
@@ -235,7 +178,6 @@ footer p {
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .cancelBtn {
     width: 100%;
     padding: 12px;
@@ -284,262 +226,16 @@ footer p {
     <h2>Our Products</h2>
     <h3>Bullet Cameras</h3>
     <div class="grid">
+        <!-- Example product; you can copy/paste for all products -->
         <div>
             <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera1.jpeg">
             <h3>Hilook 1080P 4 Channel DVR & 4 Bullet Cameras DIY CCTV KIT</h3>
             <p>Reliable, easy to use, and cost-effective surveillance.</p>
             <button class="buyBtn" data-product="Hilook 1080P 4 Channel DIY Kit">Buy</button>
         </div>
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera2.jpeg">
-            <h3>Hilook 1080P 8 Channel DVR & 8 Bullet Cameras CCTV KIT</h3>
-            <p>High-definition coverage with 8 outdoor cameras.</p>
-            <button class="buyBtn" data-product="Hilook 1080P 8 Channel DIY Kit">Buy</button>
-        </div>
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera3.jpeg">
-            <h3>Hikvision 1080P DVR & 4 Bullet Cameras DIY CCTV Kit</h3>
-            <p>High-performance home and business security solution.</p>
-            <button class="buyBtn" data-product="Hikvision 1080P 4 Channel DIY Kit">Buy</button>
-        </div>
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera4.jpeg">
-            <h3>Hikvision 1080P 8 Channel DVR & 8 Bullet Cameras DIY CCTV KIT</h3>
-            <p>Perfect for large property monitoring with ultra-clear imaging.</p>
-            <button class="buyBtn" data-product="Hikvision 1080P 8 Channel DIY Kit">Buy</button>
-        </div>
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera5.jpeg">
-            <h3>Hikvision ColorVu 1080P 4 Channel DIY CCTV KIT</h3>
-            <p>Full-colour 24/7 surveillance — even in total darkness.</p>
-            <button class="buyBtn" data-product="Hikvision 1080P 4 Channel ColorVu Kit">Buy</button>
-        </div>
-
-            <!-- PRODUCT 6 -->
-<div>
-    <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera6.png">
-    <h3>Hikvision 8ch CCTV Kit</h3>
-    <p>
-        A complete high-quality surveillance bundle for homes, offices, and businesses.  
-        Designed for fast installation, reliability, and full HD recording.
-    </p>
-    <button class="buyBtn" data-product="Hikvision 8ch CCTV Kit">Buy</button>
-</div>
-
-<!-- PRODUCT 7 -->
-<div>
-    <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera7.png">
-    <h3>Remote View | High Spec | Full HD | H.265 | 1080P (8 Channel)</h3>
-    <p>
-        A powerful 8-channel DIY CCTV Kit with high-quality 1080P cameras,  
-        H.265 compression, remote view via Hik-Connect App, and IP67 weather protection.  
-        Includes: DS-7108HQHI-K1 DVR, 8 x 2MP Bullet Cameras, cables, and power supplies.
-    </p>
-    <button class="buyBtn" data-product="High Spec 8 Channel Full HD CCTV Kit">Buy</button>
-</div>
-
-<!-- PRODUCT 8 -->
-<div>
-    <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera8.png">
-    <h3>High Spec 4 Channel DIY CCTV Kit</h3>
-    <p>
-        Ideal for home and business use, offering high-quality 1080P surveillance.  
-        Includes DS-7104HQHI-K1 DVR and 4 full HD cameras for clear day/night monitoring.
-    </p>
-    <button class="buyBtn" data-product="High Spec 4 Channel DIY CCTV Kit">Buy</button>
-</div>
-
-<!-- PRODUCT 9 -->
-<div>
-    <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera9.png">
-    <h3>Dahua 8 Channel 1080P CCTV Kit</h3>
-    <p>
-        Perfect for homes & small businesses.  
-        Includes: Dahua 8ch DVR, 8 x 1080P Bullet Cameras, 20m cables, junction boxes,  
-        power supplies, and splitters.
-    </p>
-    <button class="buyBtn" data-product="Dahua 8 Channel 1080P CCTV Kit">Buy</button>
-</div>
-
-<!-- PRODUCT 10 -->
-<div>
-    <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera10.png">
-    <h3>8 Channel H.264 AHD DVR Kit (1080p Cameras)</h3>
-    <p>
-        Includes: 8ch H.264 DVR, 1080p digital cameras, 15m BNC cables,  
-        power supply, power splitters, USB mouse, and manual.  
-        Supports mobile remote viewing, waterproof cameras, and motion detection.
-    </p>
-    <button class="buyBtn" data-product="8 Channel H.264 AHD 1080P Kit">Buy</button>
-</div>
-
-<!-- PRODUCT 11 -->
-<div>
-    <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/bullet%20camera11.png">
-    <h3>4 Channel H.264 HD DVR Kit (720P Cameras)</h3>
-    <p>
-        Includes 4 x 720P cameras, 18m cables, motion detection,  
-        remote viewing, waterproof design, and full hexaplex operation.  
-        4ch 720P @ 25fps recording & playback.
-    </p>
-    <button class="buyBtn" data-product="4 Channel H.264 HD 720P Kit">Buy</button>
-</div>
-
-    
+        <!-- Add more products as needed -->
     </div>
 </section>
-
-  <!-- ------------------ SENSORS & DETECTORS ------------------ -->
-<section id="sensors">
-    <h3>Sensors & Detectors</h3>
-
-    <div class="grid">
-
-        <!-- SENSOR PRODUCT 1 -->
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors1.png">
-            <h3>Ajax Wireless Alarm Starter Kit - 3</h3>
-            <p>
-                Wireless alarm system installable within 30 minutes.  
-                Full control via the Ajax Smart Security App with panic alerts,  
-                notifications, and adjustable sensor settings.  
-                SmartSocket integration enables automation features.
-            </p>
-            <button class="buyBtn" data-product="Ajax Wireless Alarm Starter Kit 3">Buy</button>
-        </div>
-
-        <!-- SENSOR PRODUCT 2 -->
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors2.png">
-            <h3>Solar Motion Sensor Alarm (129dB)</h3>
-            <p>
-                5–8m wide motion detection, 110° sensing angle, 129dB siren,  
-                and 6-LED flashlight.  
-                Features 4 operating modes, solar-powered operation (30 days per charge),  
-                and IP65 waterproof design for all-weather protection.
-            </p>
-            <button class="buyBtn" data-product="Solar Motion Sensor Alarm 129dB">Buy</button>
-        </div>
-
-        <!-- SENSOR PRODUCT 3 -->
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors3.png">
-            <h3>Hikvision DS-PDPC12PF-EG2-WE Wireless PIR-Camera Detector</h3>
-            <p>
-                Two-way wireless PIR detector with integrated camera for  
-                instant motion-triggered video verification.  
-                Ideal for smart, real-time monitoring in homes and businesses.
-            </p>
-            <button class="buyBtn" data-product="Hikvision Wireless PIR Camera Detector">Buy</button>
-        </div>
-
-        <!-- SENSOR PRODUCT 4 -->
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors4.png">
-            <h3>Onyyx Wireless Security Hub Kit (Up to 20 Devices)</h3>
-            <p>
-                Wireless bi-directional security system supporting up to 20 devices.  
-                Full control via Onyyx App or keyring remote.  
-                200m wireless range, LTE/Dual SIM/2G/Wi-Fi support,  
-                real-time notifications, and simple QR-code setup.  
-                12-hour HUB battery life and 24-month sensor battery life.
-            </p>
-            <button class="buyBtn" data-product="Onyyx Wireless Security Hub Kit">Buy</button>
-        </div>
-
-        <!-- SENSOR PRODUCT 5 -->
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors5.png">
-            <h3>Onyyx Complete Wireless Security Kit (Panel + PIRs + Siren)</h3>
-            <p>
-                Full wireless protection system including:  
-                1x Panel, 4x PIR sensors, 1x Remote, 1x Door Sensor,  
-                and 1x Outdoor Siren.  
-                Supports up to 20 devices, app control, 200m wireless range,  
-                LTE/Dual SIM/Wi-Fi 2.4GHz connectivity, and event notifications.
-            </p>
-            <button class="buyBtn" data-product="Onyyx Complete Wireless Security Kit">Buy</button>
-        </div>
-
-        <!-- SENSOR PRODUCT 6 -->
-        <div>
-            <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors6.png">
-            <h3>Solar Motion Sensor Alarm – Model 2 (129dB)</h3>
-            <p>
-                Wide 5–8m detection range, 110° angle, 129dB siren,  
-                and bright 6-LED flashlight.  
-                Features 4 operation modes and long-lasting solar-powered battery  
-                providing up to 30 days of use. IP65 waterproof for any environment.
-            </p>
-            <button class="buyBtn" data-product="Solar Motion Sensor Alarm Model 2">Buy</button>
-        </div>
-
-        <!-- SENSOR PRODUCT 7 -->
-<div>
-    <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors7.png">
-    <h3>Hikvision AX PRO Wireless Security Kit</h3>
-    <p>
-        Complete professional wireless alarm system including AX PRO Hub,  
-        wireless PIR detectors, keyfobs, and internal siren.  
-        Supports TCP/IP, Wi-Fi & GPRS, Tri-X/Cam-X protocol, AES-128 encryption,  
-        and long-range RF communication.
-        <br><br>
-        <strong>Hub Features (DS-PWA64-L-WE):</strong><br>
-        • Supports 64 zones, 48 PIRCAMs, 32 keyfobs, repeaters & keypads<br>
-        • 4520mAh lithium backup battery<br>
-        • Live video via Hik-Connect<br>
-        • Notification via messages or calls<br>
-        • Web, mobile & cloud configuration<br>
-        • SIA-DC09, Contact ID, SIA protocols
-        <br><br>
-        <strong>Included Components:</strong><br>
-        • 4 × Wireless PIR Detectors (DS-PDP15P-EG2-WE)<br>
-        &nbsp;&nbsp;&nbsp;– 15m detection, pet immune up to 30kg<br>
-        &nbsp;&nbsp;&nbsp;– SEC digital processing, remote configurable<br><br>
-        • 2 × Wireless Keyfobs (DS-PKF1-WE)<br>
-        &nbsp;&nbsp;&nbsp;– Arm/disarm, lock/unlock, remote configuration<br><br>
-        • 1 × Wireless Internal Siren (DS-PSG-WI-868)<br>
-        &nbsp;&nbsp;&nbsp;– Adjustable volume, IP54, tamper protection<br>
-        &nbsp;&nbsp;&nbsp;– 3 alarm sounds: fire, panic, intrusion
-    </p>
-    <button class="buyBtn" data-product="Hikvision AX PRO Wireless Security Kit">Buy</button>
-</div>
-
-        <!-- SENSOR PRODUCT 8 -->
-<div>
-    <img src="https://raw.githubusercontent.com/Ngwenya031/NovusCrocs/main/images/sensors8.png">
-    <h3>7-Inch Touchscreen Video Intercom & Door Station Kit</h3>
-    <p>
-        Smart and user-friendly video intercom system featuring a 7-inch full-color  
-        touchscreen monitor and advanced door station with HD video and access control.
-        <br><br>
-        <strong>Indoor Station Features:</strong><br>
-        • UI V2.0 with intuitive user interface<br>
-        • 7-inch 1024×600 touch screen<br>
-        • Supports PoE power<br>
-        • Stores messages & snapshots via TF card<br>
-        • Live view of door stations & linked cameras<br>
-        • Remote unlocking via mobile app or client software<br>
-        • Built-in Wi-Fi support
-        <br><br>
-        <strong>Door Station Features:</strong><br>
-        • 2MP HD fisheye camera with IR illumination<br>
-        • Access control integration<br>
-        • Noise suppression & echo cancellation<br>
-        • H.264 video compression<br>
-        • Tamper alarm<br>
-        • Supports up to 8 sub-modules<br>
-        • Customizable name tag
-    </p>
-    <button class="buyBtn" data-product="7-Inch Touch Video Intercom Kit">Buy</button>
-</div>
-
-
-
-    </div>
-</section>
-
-
 
 <section id="contact">
     <h2>Contact Us</h2>
@@ -587,7 +283,6 @@ padding:15px 20px; border-radius:50px; font-weight:bold;">
             <option value="">-- Choose --</option>
             <option value="Cash on Delivery">Cash on Delivery</option>
             <option value="EFT Bank Transfer for Installments">EFT Bank Transfer</option>
-            
         </select>
         <button id="confirmOrder">Confirm Order</button>
         <button id="closePopup" class="cancelBtn">Cancel</button>
@@ -618,9 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    closePopup.addEventListener("click", () => {
-        popup.style.display = "none";
-    });
+    closePopup.addEventListener("click", () => { popup.style.display = "none"; });
 
     confirmOrder.addEventListener("click", () => {
         const product = popup.dataset.product;
@@ -634,28 +327,12 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const message = 
-`New Order from Novus Crocs Website:
-
-Product: ${product}
-Name: ${name}
-Phone: ${phone}
-Email: ${email || "Not provided"}
-Payment Method: ${payment}
-`;
-
- 
-            const whatsappURL = "https://wa.me/27673212377?text=" + encodeURIComponent(message);
-
-
+        const message = `New Order from Novus Crocs Website:\n\nProduct: ${product}\nName: ${name}\nPhone: ${phone}\nEmail: ${email || "Not provided"}\nPayment Method: ${payment}`;
+        const whatsappURL = "https://wa.me/27673212377?text=" + encodeURIComponent(message);
         window.open(whatsappURL, "_blank");
         popup.style.display = "none";
 
-        // Reset form
-        buyerName.value = "";
-        buyerPhone.value = "";
-        buyerEmail.value = "";
-        paymentMethod.selectedIndex = 0;
+        buyerName.value = ""; buyerPhone.value = ""; buyerEmail.value = ""; paymentMethod.selectedIndex = 0;
     });
 
     /* --- CHATBOT --- */
@@ -673,34 +350,21 @@ Payment Method: ${payment}
         }
     });
 
-    aiCloseBtn.addEventListener("click", () => {
-        aiChatWindow.style.display = "none";
-    });
-
+    aiCloseBtn.addEventListener("click", () => { aiChatWindow.style.display = "none"; });
     aiSendBtn.addEventListener("click", sendMsg);
-    aiChatInput.addEventListener("keypress", e => {
-        if (e.key === "Enter") sendMsg();
-    });
+    aiChatInput.addEventListener("keypress", e => { if(e.key==="Enter") sendMsg(); });
 
     function addMsg(role, text) {
         const div = document.createElement("div");
         div.innerText = text;
-        div.style.margin = "8px 0";
-        div.style.padding = "10px";
-        div.style.borderRadius = "8px";
-        div.style.whiteSpace = "pre-wrap";
-        if (role === "user") {
-            div.style.background = "#0078d7";
-            div.style.color = "white";
-            div.style.textAlign = "right";
-        } else {
-            div.style.background = "#e2e8f0";
-        }
+        div.style.margin = "8px 0"; div.style.padding = "10px"; div.style.borderRadius = "8px"; div.style.whiteSpace = "pre-wrap";
+        if(role==="user"){ div.style.background="#0078d7"; div.style.color="white"; div.style.textAlign="right"; }
+        else{ div.style.background="#e2e8f0"; }
         aiChatMessages.appendChild(div);
         aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
     }
 
-    /* --- VoltAI API sendMsg --- */
+    /* --- Ollama Local API sendMsg --- */
     async function sendMsg() {
         const input = aiChatInput.value.trim();
         if (!input) return;
@@ -709,24 +373,19 @@ Payment Method: ${payment}
         addMsg("ai", "⏳ Thinking...");
 
         try {
-            const response = await fetch("https://api.voltai.com/v1/chat/completions", {
+            const response = await fetch("http://localhost:11434/v1/completions", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer sk-1234567890`
-                },
-                body: JSON.stringify({
-                    model: "voltai-chat",
-                    messages: [{ role: "user", content: input }]
-                })
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ model: "llama3", prompt: input, max_tokens: 200 })
             });
-
             const data = await response.json();
-            aiChatMessages.lastChild.remove(); // Remove "Thinking..."
-            addMsg("ai", data.choices[0].message.content);
-
+            aiChatMessages.lastChild.remove();
+            const reply = data.completion || "No response from the bot.";
+            addMsg("ai", reply);
         } catch (e) {
-            addMsg("ai", "⚠ Error: Unable to connect.");
+            aiChatMessages.lastChild.remove();
+            addMsg("ai", "⚠ Error: Unable to connect to Ollama API.");
+            console.error(e);
         }
     }
 
@@ -735,6 +394,7 @@ Payment Method: ${payment}
 
 </body>
 </html>
+
 
 
 
